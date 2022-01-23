@@ -1,11 +1,11 @@
-import { Browser, launch } from "puppeteer";
+import Puppeteer, { Browser } from "puppeteer";
 
 class BrowserService {
-  static async getBrowser(): Promise<BrowserService> {
-    return launch({});
+  async getBrowser(): Promise<Browser> {
+    return Puppeteer.launch({});
   }
 
-  static async closeBrowser(browser: Browser): Promise<void> {
+  async closeBrowser(browser: Browser): Promise<void> {
     if (!browser) return;
 
     await browser.close();
