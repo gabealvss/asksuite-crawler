@@ -10,7 +10,7 @@
     "lint": "eslint src --ext ts",
     "build": "tsc -p .",
     "prettify": "prettier --write .",
-    "start": "node dist/src/server.js"
+    "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/server.js"
   },
   "author": "Gabriel Alves",
   "license": "ISC",
