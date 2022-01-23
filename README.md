@@ -71,8 +71,6 @@ To achieve this result you may:
 * Node 10+
 * Dotenv setup
 
-Already installed: `express` `puppeteer` `dotenv`
-
 **_Feel free to add any lib you find relevant to your test._**
 
 
