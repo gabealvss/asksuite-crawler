@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use("/api/v1", router);
+app.use(router);
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
     if (err instanceof AppError) {
@@ -21,6 +21,8 @@ app.use(
         message: err.message,
       });
     }
+
+    console.log(err);
 
     return response.status(500).json({
       status: "error",
